@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieService } from '../../services/movie.service';
 
 @Component({
   selector: 'app-browse',
@@ -8,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BrowseComponent implements OnInit {
 
-  constructor() { }
+  constructor( private movieService: MovieService ) { }
 
   ngOnInit(): void {
+    this.movieService.getMovieByTitle('star')
+      .subscribe( console.log );
   }
 
 }

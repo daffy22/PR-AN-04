@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -25,8 +25,7 @@ export class NavBarComponent implements OnInit {
   }
 
   detectChangesRoute () {
-    this.url = this.router.url;
-    this.url = this.url.slice(1);
+    this.url = this.router.url.slice(1);
   }
 
 }
