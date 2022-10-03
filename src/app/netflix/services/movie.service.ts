@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { Movie } from '../interfaces/movie';
 
 @Injectable({
   providedIn: 'root'
@@ -17,8 +18,8 @@ export class MovieService {
 
     const params = new HttpParams()
             .set('apiKey', this._apiKey)
-            .set('t', title);
+            .set('s', title);
 
-    return this.http.get(url, { params });
+    return this.http.get<Movie[]>(url, { params });
   }
 }

@@ -8,6 +8,7 @@ import { SeriesComponent } from './pages/series/series.component';
 import { MoviesComponent } from './pages/movies/movies.component';
 import { ListComponent } from './pages/list/list.component';
 import { BrowseComponent } from './pages/browse/browse.component';
+import { MovieComponent } from './components/movie/movie.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { BrowseComponent } from './pages/browse/browse.component';
     SeriesComponent,
     MoviesComponent,
     ListComponent,
-    BrowseComponent
+    BrowseComponent,
+    MovieComponent
   ],
   imports: [
     CommonModule,
