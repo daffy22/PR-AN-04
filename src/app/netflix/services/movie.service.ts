@@ -13,13 +13,13 @@ export class MovieService {
 
   constructor( private http: HttpClient ) { }
 
-  getMovieByTitle(title: string) {
+  getMovieByTitle(title: string = 'abc') {
     const url: string = ` ${ this._baseUrl }`;
 
     const params = new HttpParams()
             .set('apiKey', this._apiKey)
             .set('s', title);
 
-    return this.http.get<Movie[]>(url, { params });
+    return this.http.get<Movie>(url, { params });
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Movie } from '../../interfaces/movie';
 import { MovieService } from '../../services/movie.service';
+import { Search } from '../../interfaces/movie';
 
 @Component({
   selector: 'app-browse',
@@ -10,15 +10,15 @@ import { MovieService } from '../../services/movie.service';
 })
 export class BrowseComponent implements OnInit {
 
-  movies: Movie[] = [];
+  searches!: Search[];
 
   constructor( private movieService: MovieService ) { }
 
   ngOnInit(): void {
-    this.movieService.getMovieByTitle('abc')
+    this.movieService.getMovieByTitle()
       .subscribe( resp => {
-        this.movies = resp;
-        console.log(this.movies);
+        const { Search } = resp;
+        this.searches = Search;
       });
   }
 

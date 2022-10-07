@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  box-sizing: 62.5%;  /* 1rem = 10px */
+}
+
 .btn-danger {
   background-color: #e50914 !important;
 }
