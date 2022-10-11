@@ -10,25 +10,29 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a [className]="actualUrl('browse') ? 'nav-link active' : 'nav-link'"
-             routerLink="browse">
+             routerLink="browse"
+             (click)="changePagesName('Home - Netflix')">
              Home
           </a>
         </li>
         <li class="nav-item">
           <a [className]="actualUrl('series') ? 'nav-link active' : 'nav-link'"
-             routerLink="series">
+             routerLink="series"
+             (click)="changePagesName('Series - Netflix')">
              Series
           </a>
         </li>
         <li class="nav-item">
           <a [className]="actualUrl('movies') ? 'nav-link active' : 'nav-link'"
-             routerLink="movies">
+             routerLink="movies"
+             (click)="changePagesName('Movies - Netflix')">
              Movies
           </a>
         </li>
         <li class="nav-item">
           <a [className]="actualUrl('my-list') ? 'nav-link active' : 'nav-link'"
-             routerLink="my-list">
+             routerLink="my-list"
+             (click)="changePagesName('My list - Netflix')">
              My list
           </a>
         </li>

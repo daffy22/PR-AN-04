@@ -8,7 +8,9 @@ import { Router } from '@angular/router';
   ]
 })
 export class NavBarComponent implements OnInit {
+
   url: string = '';
+  $titleName: HTMLElement = document.getElementById('title-name') || new HTMLElement;
 
   constructor(private router: Router) {
     router.events.subscribe( (_) => {
@@ -22,6 +24,11 @@ export class NavBarComponent implements OnInit {
 
   actualUrl(url: string): boolean {
     return this.url === url;
+  }
+
+  changePagesName(name: string) {
+    this.$titleName.textContent = name;
+    localStorage.setItem('page-name', name);
   }
 
   detectChangesRoute () {
