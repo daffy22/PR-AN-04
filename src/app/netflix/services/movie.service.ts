@@ -24,4 +24,15 @@ export class MovieService {
 
     return this.http.get<Movie>(url, { params });
   }
+
+  getMovieByTitleAndType(title: string = 'abc', type: string = 'movie') {
+    const url: string = `${ this._baseUrl }`;
+
+    const params = new HttpParams()
+            .set('apiKey', this._apiKey)
+            .set('s', title)
+            .set('type', type);
+
+    return this.http.get<Movie>(url, { params });
+  }
 }

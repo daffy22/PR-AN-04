@@ -1,4 +1,4 @@
-<div class="mt-5">
+<div class="mb-5">
   <h2 class="text-start text-light">{{ sectionName | titlecase }}</h2>
 
   <div id="carousel{{ id }}" class="carousel slide mt-3" data-bs-ride="carousel">
@@ -17,7 +17,7 @@
         <ng-container *ngIf="items.length > 6">
           <div class="carousel-item" >
             <div class="row">
-              <ng-container *ngFor="let search of items.slice(items.length / 2 + 2, items.length)">
+              <ng-container *ngFor="let search of items.slice(items.length / 2, items.length)">
                 <div class="col-2">
                   <app-movie [movie]="search"></app-movie>
                 </div>
