@@ -1,45 +1,6 @@
 <div class="container text-center">
-  <div class="">
-    <h2 class="text-start text-light">My list</h2>
-    <!-- <ng-container *ngFor="let search of searches">
-      <div class="col-2 mt-3">
-        <app-movie [movie]="search"></app-movie>
-      </div>
-    </ng-container> -->
-    <div id="carouselExampleControls" class="carousel slide mt-3" data-bs-ride="carousel">
-      <div class="carousel-inner">
 
-          <div class="carousel-item active" >
-            <div class="row">
-              <ng-container *ngFor="let search of searches">
-                <div class="col-3">
-                  <app-movie [movie]="search"></app-movie>
-                </div>
-              </ng-container>
-            </div>
-          </div>
+  <app-carousel [id]="'1'" [items]="myList" [name]="'My list'"></app-carousel>
+  <app-carousel [id]="'2'" [items]="myList" [name]="'Best movies'"></app-carousel>
 
-          <div class="carousel-item" >
-            <div class="row">
-              <ng-container *ngFor="let search of searches">
-                <div class="col-3">
-                  <app-movie [movie]="search"></app-movie>
-                </div>
-              </ng-container>
-            </div>
-          </div>
-      </div>
-
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-
-    </div>
-
-  </div>
 </div>

@@ -9,6 +9,7 @@ import { MoviesComponent } from './pages/movies/movies.component';
 import { ListComponent } from './pages/list/list.component';
 import { BrowseComponent } from './pages/browse/browse.component';
 import { MovieComponent } from './components/movie/movie.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { MovieComponent } from './components/movie/movie.component';
     MoviesComponent,
     ListComponent,
     BrowseComponent,
-    MovieComponent
+    MovieComponent,
+    CarouselComponent
   ],
   imports: [
     CommonModule,

@@ -6,3 +6,7 @@ html {
 .btn-danger {
   background-color: #e50914 !important;
 }
+
+.bg-dark {
+  background-color: #141414 !important;
+}

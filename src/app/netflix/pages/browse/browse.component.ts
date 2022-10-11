@@ -10,16 +10,16 @@ import { Search } from '../../interfaces/movie';
 })
 export class BrowseComponent implements OnInit {
 
-  searches!: Search[];
+  myList!: Search[];
 
   constructor( private movieService: MovieService ) { }
 
   ngOnInit(): void {
     this.movieService.getMovieByTitle()
-      .subscribe( resp => {
-        const { Search } = resp;
-        this.searches = Search;
-      });
+    .subscribe( resp => {
+      const { Search } = resp;
+      this.myList = Search;
+    });
   }
 
 }

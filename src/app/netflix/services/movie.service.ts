@@ -8,13 +8,15 @@ import { Movie } from '../interfaces/movie';
 })
 export class MovieService {
 
+  // TODO: implements type search method http://www.omdbapi.com/?apiKey=84e2c97c&s=abc&type=movie
+
   private _apiKey: string = environment.apiKey;
   private _baseUrl: string = environment.baseUrl;
 
   constructor( private http: HttpClient ) { }
 
   getMovieByTitle(title: string = 'abc') {
-    const url: string = ` ${ this._baseUrl }`;
+    const url: string = `${ this._baseUrl }`;
 
     const params = new HttpParams()
             .set('apiKey', this._apiKey)

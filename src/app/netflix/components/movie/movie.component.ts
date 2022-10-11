@@ -9,6 +9,7 @@ import { Search, Type } from '../../interfaces/movie';
     img {
       height: 8.2rem;
       border: none;
+      cursor: pointer;
     }
     `
   ]
